@@ -8,16 +8,16 @@ class Shirt
   attr_reader :type, :color, :size, :price
   attr_writer :price
 
-  def initialize(type, color, size, price)
-    @type = type
-    @color = color
-    @size = size
-    @price = price
+  def initialize(input_options)
+    @type = input_options[:type]
+    @color = input_options[:color]
+    @size = input_options[:size]
+    @price = input_options[:price]
   end
 end
 
-shirt1 = Shirt.new("long-sleeved", "pink", "small", 20)
-shirt2 = Shirt.new("short-sleeved", "black", "medium", 37)
+shirt1 = Shirt.new(type: "long-sleeved", color: "pink", size: "small", price: 20)
+shirt2 = Shirt.new(type: "short-sleeved", color: "black", size: "medium", price: 37)
 puts shirt1.type
 puts shirt1.color
 puts shirt1.price
